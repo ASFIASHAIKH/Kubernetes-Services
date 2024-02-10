@@ -6,13 +6,13 @@ services:
       - "6379:6379"
   nodejsserver01:
     depends_on:
-      - "redisnode01"
+      - "RedisNode-Svc"
     image: my-nodejs
     ports: 
       - "8081:8081"
   haproxyserver:
     depends_on:
-      - "nodejsserver01"
+      - "NodeJs-Svc"
     image: my-haproxy
     ports: 
       - "90:80"
