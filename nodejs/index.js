@@ -3,7 +3,7 @@ const redis = require('redis');
 
 const app = express();
 const client = redis.createClient({
-    host:  'RedisNode-Svc',
+    host:  'redisnode-svc',
     port: 6379
 });
 client.set('visits', 0);
